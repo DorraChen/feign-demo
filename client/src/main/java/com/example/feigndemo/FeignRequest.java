@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.PostMapping;
  * @date 2021/11/30 16:11
  * @description
  */
-@FeignClient(name = "server", url = "http://localhost:8071/server")
+@FeignClient(name = "server", url = "http://localhost:8071/server", configuration = FeignConfig.class)
 public interface FeignRequest {
     @PostMapping(value = "/server")
     Response getServer1();
